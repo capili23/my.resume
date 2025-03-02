@@ -4,61 +4,172 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume</title>
+
+  <style>
+    /* 1. Set the background color and adjust margins */
+    body {
+      background-color: #f0f0f0; /* Change this to any color you like */
+      margin: 100px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* 2. Style all H2 tags using class selector */
+    .section-title {
+      color: darkblue; /* Change this to any color you prefer */
+    }
+
+    /* 3. Style the image with a border and center it */
+    .profile-img {
+      display: block;
+      margin: 0 auto;
+      border: 5px solid black;
+    }
+
+    /* 4. Center the full name, address, email, and contact */
+    #personal-info {
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* 5. Style the paragraphs */
+    p {
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* 6. Style the list items */
+    ul {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+
+    /* 7. Style the table */
+    #reference-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    #reference-table th, #reference-table td {
+      border: 2px solid black;
+      padding: 10px;
+      text-align: left;
+    }
+
+    /* 8. Style the links */
+    a {
+      text-decoration: none; /* Remove underline */
+    }
+
+    a:link {
+      color: blue;
+    }
+
+    a:visited {
+      color: purple;
+    }
+
+    a:hover {
+      color: red;
+    }
+
+    a:active {
+      color: green;
+    }
+  </style>
 </head>
 <body>
-  <p>
-    <img src="473780693_1818229882049385_7635731183595843041_n.jpg" width="210px" height="200px">
+
+  <!-- Profile Image -->
+  <img src="473780693_1818229882049385_7635731183595843041_n.jpg" width="210px" height="200px" alt="Profile Picture" class="profile-img">
+
+  <!-- Personal Information -->
+  <div id="personal-info">
     <h2>Capili, Nathaniel P.</h2>
-    <b>Email:</b><a href="mailto:capilinathaniel8@gmail.com" target="_blank">capilinathaniel8@gmail.com</a><br>
-    <b>Phone:</b> 09947695820<br>
-    <b>Address:</b> Magalant, Sta. Cruz, Guanzon, 0701<br>
-    <b>LinkedIn:</b><a href="https://www.linkedin.com/in/yourprofile" target="_blank">https://www.linkedin.com/in/yourprofile</a><br>
-  </p>
+    <p>
+      <b>Email:</b> <a href="mailto:capilinathaniel8@gmail.com" target="_blank">capilinathaniel8@gmail.com</a><br>
+      <b>Phone:</b> 09947695820<br>
+      <b>Address:</b> Magalang, Sta. Cruz, Pampanga, 0701<br>
+      <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a>
+    </p>
+  </div>
+
   <hr>
-  <h2>CAREER OBJECTIVES</h2>
-  <p>To create androids, as in to create an artificial intelligent droid for military-grade purposes.</p>
+
+  <!-- Career Objectives -->
+  <h2 class="section-title" id="summary">CAREER OBJECTIVES</h2>
+  <p>To create androids—artificial intelligent droids—for military-grade purposes.</p>
+
   <hr>
-  <h2>EXPERTISE BIO</h2>
-  <p>Making drinks (alcohol), and cooking. I make drinks for customers in my job, and it pays well.</p>
+
+  <!-- Expertise Bio -->
+  <h2 class="section-title">EXPERTISE BIO</h2>
+  <p>Making drinks (alcohol) and cooking. I mix drinks for customers in my job, and it pays well.</p>
+
   <hr>
-  <h2>EDUCATION</h2>
+
+  <!-- Education -->
+  <h2 class="section-title" id="education">EDUCATION</h2>
   <ul>
     <li><strong>School/University:</strong> Pampanga State Agricultural University (PSAU)</li>
     <li><strong>Degree Program:</strong> Bachelor of Science in Information Technology (BSIT)</li>
     <li><strong>Year Level:</strong> First Year</li>
     <li><strong>Inclusive Dates:</strong> 2024–Present</li>
   </ul>
+
   <hr>
-  <h2>HARDWARE SKILLS</h2>
+
+  <!-- Hardware Skills -->
+  <h2 class="section-title" id="hardware">HARDWARE SKILLS</h2>
   <ul>
-    <!-- Add hardware skills here -->
+    <li>PC Assembly</li>
+    <li>Hardware Troubleshooting</li>
   </ul>
+
   <hr>
-  <h2>SOFTWARE SKILLS</h2>
+
+  <!-- Software Skills -->
+  <h2 class="section-title" id="software">SOFTWARE SKILLS</h2>
   <ul>
     <li>Java</li>
     <li>Python</li>
   </ul>
+
   <hr>
-  <h2>ADDITIONAL SKILLS</h2>
+
+  <!-- Additional Skills -->
+  <h2 class="section-title">ADDITIONAL SKILLS</h2>
   <ul>
     <li>Contemplation</li>
     <li>Patience and Perseverance</li>
   </ul>
+
   <hr>
-  <h2>CHARACTER REFERENCE</h2>
-  <table border="2" width="100%" cellpadding="10%" cellspacing="11%">
-    <tbody>
+
+  <!-- Character Reference -->
+  <h2 class="section-title" id="experience">CHARACTER REFERENCE</h2>
+  <table id="reference-table">
+    <thead>
       <tr>
         <th>FULL NAME</th>
         <th>DESIGNATION</th>
         <th>EMAIL</th>
         <th>CONTACT NUMBER</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
         <td>Capili, Nathaniel P.</td>
-        <td>Magalant, Sta. Cruz, Guanzon, 0701</td>
+        <td>Student</td>
         <td>capilinathaniel8@gmail.com</td>
         <td>09947695820</td>
       </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <!-- Back to Top Link -->
+  <p><a href="#top">Back to Top</a></p>
+
+</body>
 </html>
