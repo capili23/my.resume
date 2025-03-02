@@ -50,24 +50,34 @@
     a:visited {
       color: #660099;
     }
-    :target {
-      background-color: #ffeb99; /* Light yellow highlight */
-      transition: background-color 1s ease-out;
+    .highlight {
+      background-color: yellow;
+      transition: background-color 1s ease-in-out;
     }
   </style>
+  <script>
+    function highlightSection(id) {
+      document.querySelectorAll('h2').forEach(el => el.classList.remove('highlight'));
+      const section = document.getElementById(id);
+      if (section) {
+        section.classList.add('highlight');
+        setTimeout(() => section.classList.remove('highlight'), 2000);
+      }
+    }
+  </script>
 </head>
 <body>
 
   <!-- Navigation Links -->
   <p>
-    <a href="#summary">Summary</a> | 
-    <a href="#career-objectives">Career Objectives</a> | 
-    <a href="#expertise-bio">Expertise Bio</a> | 
-    <a href="#education">Education</a> | 
-    <a href="#hardware-skills">Hardware Skills</a> | 
-    <a href="#software-skills">Software Skills</a> | 
-    <a href="#additional-skills">Additional Skills</a> | 
-    <a href="#reference">Character Reference</a>
+    <a href="#summary" onclick="highlightSection('summary')">Summary</a> | 
+    <a href="#career-objectives" onclick="highlightSection('career-objectives')">Career Objectives</a> | 
+    <a href="#expertise-bio" onclick="highlightSection('expertise-bio')">Expertise Bio</a> | 
+    <a href="#education" onclick="highlightSection('education')">Education</a> | 
+    <a href="#hardware-skills" onclick="highlightSection('hardware-skills')">Hardware Skills</a> | 
+    <a href="#software-skills" onclick="highlightSection('software-skills')">Software Skills</a> | 
+    <a href="#additional-skills" onclick="highlightSection('additional-skills')">Additional Skills</a> | 
+    <a href="#reference" onclick="highlightSection('reference')">Character Reference</a>
   </p>
 
   <p>
@@ -81,6 +91,10 @@
     <b>Address:</b> Magalang, Sta. Cruz, Guanzon, 0701<br>
     <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/yourprofile">https://www.linkedin.com/in/yourprofile</a><br>
   </div>
+
+  <hr>
+  <h2 class="heading" id="summary">SUMMARY</h2>
+  <p>I have a strong passion for technology and innovation. My goal is to develop AI-powered solutions that enhance human capabilities. I enjoy problem-solving, especially in hardware and software development, and I strive to make a meaningful impact in my field.</p>
 
   <hr>
   <h2 class="heading" id="career-objectives">CAREER OBJECTIVES</h2>
@@ -143,14 +157,9 @@
   </table>
 
   <hr>
-  <h2 class="heading" id="summary">SUMMARY</h2>
-  <p>
-    I may not be the smartest person, but I have great ideas. My lack of materials motivates me to find solutions to problems, especially in countering illegal hacking activities. I’ve been hacked many times, which fuels my drive to develop better security measures. My ultimate goal is to become a philanthropist and help others through innovation.
-  </p>
-
-  <hr>
   <p><a href="#profile-info">Back to Top</a></p>
 
 </body>
 </html>
+
 
