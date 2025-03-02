@@ -50,20 +50,33 @@
     a:visited {
       color: #660099;
     }
+    .highlight {
+      background-color: yellow;
+      transition: background-color 1.5s ease-out;
+    }
   </style>
+  <script>
+    function highlightSection(id) {
+      var section = document.getElementById(id);
+      section.classList.add("highlight");
+      setTimeout(() => {
+        section.classList.remove("highlight");
+      }, 1500);
+    }
+  </script>
 </head>
 <body>
 
   <!-- Navigation Links -->
   <p>
-    <a href="#summary">Summary</a> | 
-    <a href="#career-objectives">Career Objectives</a> | 
-    <a href="#expertise-bio">Expertise Bio</a> | 
-    <a href="#education">Education</a> | 
-    <a href="#hardware-skills">Hardware Skills</a> | 
-    <a href="#software-skills">Software Skills</a> | 
-    <a href="#additional-skills">Additional Skills</a> | 
-    <a href="#reference">Character Reference</a>
+    <a href="#summary" onclick="highlightSection('summary')">Summary</a> | 
+    <a href="#career-objectives" onclick="highlightSection('career-objectives')">Career Objectives</a> | 
+    <a href="#expertise-bio" onclick="highlightSection('expertise-bio')">Expertise Bio</a> | 
+    <a href="#education" onclick="highlightSection('education')">Education</a> | 
+    <a href="#hardware-skills" onclick="highlightSection('hardware-skills')">Hardware Skills</a> | 
+    <a href="#software-skills" onclick="highlightSection('software-skills')">Software Skills</a> | 
+    <a href="#additional-skills" onclick="highlightSection('additional-skills')">Additional Skills</a> | 
+    <a href="#reference" onclick="highlightSection('reference')">Character Reference</a>
   </p>
 
   <p>
@@ -137,6 +150,10 @@
       <td>09947695820</td>
     </tr>
   </table>
+
+  <hr>
+  <h2 class="heading" id="summary">SUMMARY</h2>
+  <p>I am motivated by my innovative ideas but often face limitations due to a lack of materials. This fuels my determination to counter illegal hacker activities, especially after my multiple accounts have been compromised. Each hacking incident gives me new insights into problem-solving. My ultimate goal is to become a philanthropist.</p>
 
   <hr>
   <p><a href="#profile-info">Back to Top</a></p>
