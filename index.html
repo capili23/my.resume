@@ -61,8 +61,13 @@
       const section = document.getElementById(id);
       if (section) {
         section.classList.add('highlight');
+        section.scrollIntoView({ behavior: 'smooth', block: 'center' });
         setTimeout(() => section.classList.remove('highlight'), 2000);
       }
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
 </head>
@@ -157,9 +162,7 @@
   </table>
 
   <hr>
-  <p><a href="#profile-info">Back to Top</a></p>
+  <p><a href="#" onclick="scrollToTop()">Back to Top</a></p>
 
 </body>
 </html>
-
-
